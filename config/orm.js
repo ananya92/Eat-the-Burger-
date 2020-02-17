@@ -8,10 +8,10 @@ var orm = {
       cb(result);
     });
   },
-  insertOne: function(tableName, colVal, cb) {
-    var queryString = "INSERT INTO ??(burger_name) VALUES (??)";
+  insertOne: function(tableName, colName, colVal, cb) {
+    var queryString = "INSERT INTO ??(??) VALUES (??)";
     console.log(queryString);
-    connection.query(queryString, [tableName, colVal], function(err, result) {
+    connection.query(queryString, [tableName, colName, colVal], function(err, result) {
       if (err) throw err;
       cb(result);
     });
