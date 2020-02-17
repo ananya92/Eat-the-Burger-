@@ -16,7 +16,7 @@ var orm = {
       cb(result);
     });
   },
-  UpdateOne: function(tableName, setColName, setColVal, whrColName, whrColVal, cb) {
+  updateOne: function(tableName, setColName, setColVal, whrColName, whrColVal, cb) {
     var queryString =
       "UPDATE TABLE ?? SET ?? = ?? WHERE ?? = ??";
 
